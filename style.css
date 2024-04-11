@@ -1,6 +1,4 @@
 /* General */
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
@@ -9,8 +7,9 @@
 }
 
 body{
-    font-family: "poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
+
 html{
     scroll-behavior: smooth;
 }
@@ -18,13 +17,14 @@ html{
 p{
     color: rgb(85, 85, 85);
 }
+
 /* transition */
 a, .btn{
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
 }
 
 nav, .nav-links{
-    display:flex;
+    display: flex;
 }
 
 nav {
@@ -34,27 +34,27 @@ nav {
 }
 
 .nav-links{
-   gap:2rem;
-   font-size: 1.5rem;
-   list-style: none;
+    gap: 2rem;
+    font-size: 1.5rem;
+    list-style: none;
 }
 
 a{
     color: black;
     text-decoration: none;
-    text-decoration-color: white
 }
 
 a:hover{
     color: gray;
     text-decoration: underline;
     text-underline-offset: 1rem;
-    text-decoration-color: 181 181 181;
+    text-decoration-color: rgb(181, 181, 181);
 }
 
 .logo{
     font-size: 2rem;
 }
+
 .logo:hover{
     cursor: default;
 }
@@ -64,10 +64,12 @@ a:hover{
 #hamburger-nav{
     display: none;
 }
+
 .hamburger-menu{
     position: relative;
-    display: inline-block
+    display: inline-block;
 }
+
 .hamburger-icon{
     display: flex;
     flex-direction: column;
@@ -76,12 +78,14 @@ a:hover{
     height: 24px;
     cursor: pointer;
 }
+
 .hamburger-icon span{
     width: 100%;
     height: 2px;
     background-color: black;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
 }
+
 .menu-links{
     position: absolute;
     top: 100%;
@@ -90,52 +94,61 @@ a:hover{
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
 }
+
 .menu-links a {
     display: block;
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color:black;
+    color: black;
     text-decoration: none;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
+
 .menu-links li{
     list-style: none;
 }
+
 .menu-links.open{
     max-height: 300px;
 }
+
 .hamburger-icon.open span:first-child{
     transform: rotate(45deg) translate(10px, 5px);
 }
+
 .hamburger-icon.open span:nth-child(2){
     opacity: 0;
 }
+
 .hamburger-icon.open span:last-child{
     transform: rotate(-45deg) translate(10px, -5px);
 }
+
 .hamburger-icon span:first-child{
     transform: none;
-}
-.hamburger-icon span:first-child{
     opacity: 1;
 }
+
 .hamburger-icon span:first-child{
     transform: none;
 }
+
 /* Sections */
 section{
     padding-top: 4vh;
-    height:96vh;
-    margin:0 10rem;
+    height: 96vh;
+    margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
 }
+
 .section-container{
-    display:flex;
+    display: flex;
 }
+
 /* profile section */
 #profile{
     display: flex;
@@ -143,76 +156,81 @@ section{
     gap: 5rem;
     height: 80vh;
 }
+
 .section_pic-container{
     display: flex;
-   height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     margin: auto 0;
 }
-
 
 .section_text{
     align-self: center;
     text-align: center;
 }
 
-.section__text p{
+.section_text p{
     font-weight: 600;
 }
-.section__text__p1{
-    text-align:center
+
+.section_text__p1{
+    text-align: center;
 }
-.section__text__p2{
-    font-size:1.75rem;
+
+.section_text__p2{
+    font-size: 1.75rem;
     margin-bottom: 1rem;
 }
+
 .title{
     font-size: 3rem;
     text-align: center;
-}   
+}
+
 #socials-container{
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 2rem;
 }
+
 /* Icons */
 .icon{
-    cursor:pointer;
+    cursor: pointer;
     height: 2rem;
 }
+
 /* Buttons */
 .btn-container{
-    display:flex;
+    display: flex;
     justify-content: center;
     gap: 1rem;
 }
+
 .btn{
-    font-weight:600;
-    transition: all 300ms ease;
+    font-weight: 600;
+    transition: all 0.3s ease;
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
 }
-.btn-color-1,.btn-color-2{
-    border: rgb(53,53,53) 0.1rem solid;
-}
-.btn-color-1:hover,.btn-color-2:hover{
-    cursor:pointer;
-}
-.btn-color-1,.btn-color-2:hover{
-   background: rgb(53,53,53);
-   color: white;
-}
-.btn-color-1:hover{
-    background: rgb(0,0,0,);
-}
-.btn-color-2{
-   background:none;
-}
+
+.btn-color-1,
 .btn-color-2:hover{
-    background: rgb(25,25,25) 0.1rem solid;
+    background: rgb(53, 53, 53);
+    color: white;
 }
-.btn-container{
-    gap:1rem;
+
+.btn-color-1:hover{
+    background: rgba(0, 0, 0, 0);
 }
+
+.btn-color-2{
+    background: none;
+}
+
+.btn-color-2:hover{
+    background: rgb(25, 25, 25) 0.1rem solid;
+}
+
